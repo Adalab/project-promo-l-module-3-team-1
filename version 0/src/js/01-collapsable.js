@@ -23,10 +23,10 @@ function changeCollapsable(ev) {
     // compruebo si es el collapsable pulsado
     if (clickedCollapsable === collapsable) {
       // si es el pulsado, le hago un toggle
-      collapsable.classList.toggle("collapsable--close");
+      collapsable.classNameList.toggle("collapsable--close");
     } else {
       // si no es el pulsado, lo cierro
-      collapsable.classList.add("collapsable--close");
+      collapsable.classNameList.add("collapsable--close");
     }
   }
 }
@@ -43,7 +43,7 @@ function handleHiddenButton(ev) {
   console.log(clicked);
 
   if (clicked !== hiddenCollapsableButton) {
-    hiddenCollapsableButton.classList.remove("hidden");
+    hiddenCollapsableButton.classNameList.remove("hidden");
   }
 }
 

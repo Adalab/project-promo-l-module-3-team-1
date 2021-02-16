@@ -2,43 +2,43 @@
 
 const inputsTextConfig = [
   {
-    inputClass: ".js-input-name",
-    cardClass: ".js-card-name",
+    inputclassName: ".js-input-name",
+    cardclassName: ".js-card-name",
     defaultValue: "Nombre apellidos",
     cardPrefix: "",
     cardElementAttribute: "innerHTML",
   },
   {
-    inputClass: ".js-input-job",
-    cardClass: ".js-card-job",
+    inputclassName: ".js-input-job",
+    cardclassName: ".js-card-job",
     defaultValue: "Developer",
     cardPrefix: "",
     cardElementAttribute: "innerHTML",
   },
   {
-    inputClass: ".js-input-email",
-    cardClass: ".js-card-email",
+    inputclassName: ".js-input-email",
+    cardclassName: ".js-card-email",
     defaultValue: "",
     cardPrefix: "mailto:",
     cardElementAttribute: "href",
   },
   {
-    inputClass: ".js-input-phone",
-    cardClass: ".js-card-phone",
+    inputclassName: ".js-input-phone",
+    cardclassName: ".js-card-phone",
     defaultValue: "",
     cardPrefix: "tel:",
     cardElementAttribute: "href",
   },
   {
-    inputClass: ".js-input-linkedin",
-    cardClass: ".js-card-linkedin",
+    inputclassName: ".js-input-linkedin",
+    cardclassName: ".js-card-linkedin",
     defaultValue: "",
     cardPrefix: "https://www.linkedin.com/in/",
     cardElementAttribute: "href",
   },
   {
-    inputClass: ".js-input-github",
-    cardClass: ".js-card-github",
+    inputclassName: ".js-input-github",
+    cardclassName: ".js-card-github",
     defaultValue: "",
     cardPrefix: "https://www.github.com/",
     cardElementAttribute: "href",
@@ -46,8 +46,8 @@ const inputsTextConfig = [
 ];
 function updateAllInputs() {
   for (const inputTextConfig of inputsTextConfig) {
-    const inputElement = document.querySelector(inputTextConfig.inputClass);
-    const cardElement = document.querySelector(inputTextConfig.cardClass);
+    const inputElement = document.querySelector(inputTextConfig.inputclassName);
+    const cardElement = document.querySelector(inputTextConfig.cardclassName);
 
     let newValue = inputElement.value;
 
@@ -77,4 +77,4 @@ const inputTextElements = document.querySelectorAll(".js-input-text");
 
 for (const inputTextElement of inputTextElements) {
   inputTextElement.addEventListener("keyup", updateAllInputs);
-};
+}

@@ -23,8 +23,8 @@ function resetInputsForm() {
 function resetPhotocardPalettes() {
   const checkedPalette = document.querySelector(".js-palette:checked");
   const checkedPaletteValue = checkedPalette.value;
-  photoCardElement.classList.remove("palette-" + checkedPaletteValue);
-  photoCardElement.classList.add("palette-1");
+  photoCardElement.classNameList.remove("palette-" + checkedPaletteValue);
+  photoCardElement.classNameList.add("palette-1");
 }
 
 function resetPalettes() {

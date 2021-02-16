@@ -19,10 +19,10 @@ function handleCreateBtn(ev) {
       console.log("Server response:", data);
       shareLink = data.cardURL;
       if (data.success === true) {
-        cardResultElement.innerHTML += `<h3 class="section__share_copy">La tarjeta ha sido creada:</h3>`;
-        cardResultElement.innerHTML += `<p><a href="${shareLink}" class="text_link_card section__twitter__button js-twitter-link" target="_blank">${shareLink}</a></p>`;
-        cardResultElement.innerHTML += `<a class="share js-btn-twitter" target="_blank">
-        <i class="fa fa-twitter" aria-hidden="true"></i> Compartir en Twitter
+        cardResultElement.innerHTML += `<h3 className="section__share_copy">La tarjeta ha sido creada:</h3>`;
+        cardResultElement.innerHTML += `<p><a href="${shareLink}" className="text_link_card section__twitter__button js-twitter-link" target="_blank">${shareLink}</a></p>`;
+        cardResultElement.innerHTML += `<a className="share js-btn-twitter" target="_blank">
+        <i className="fa fa-twitter" aria-hidden="true"></i> Compartir en Twitter
       </a>`;
         createBtn.disabled = true;
         const twitterLink = document.querySelector(".js-btn-twitter");
@@ -31,8 +31,8 @@ function handleCreateBtn(ev) {
           `https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${shareLink}`
         );
       } else {
-        cardResultElement.innerHTML += `<h4 class= "title1">La tarjeta no puede ser creada aún</h4>`;
-        cardResultElement.innerHTML += `<h4 class = "title1">Por favor, completa todos los campos marcados con *</h4>`;
+        cardResultElement.innerHTML += `<h4 className= "title1">La tarjeta no puede ser creada aún</h4>`;
+        cardResultElement.innerHTML += `<h4 className = "title1">Por favor, completa todos los campos marcados con *</h4>`;
       }
     });
 }
