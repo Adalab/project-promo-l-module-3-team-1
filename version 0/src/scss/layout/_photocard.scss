@@ -1,0 +1,197 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 38px 35px 40px 45px;
+  background-image: url(../images/Esquema.png);
+  /*   linear-gradient(
+    to bottom,
+    $colorBackSilver,
+    $colorBackGrey
+  ); */
+  @media all and (min-width: 768px) {
+    width: 329px;
+    padding: 0px 44px 260px 45px;
+    margin: 20px 40px 20px 0;
+    border-radius: 6px;
+  }
+
+  @media all and (min-width: 1024px) {
+    width: 57%;
+    padding: 100px 172px 260px 173px;
+  }
+}
+
+.photo-container {
+  margin-top: 20px;
+}
+
+.photo-button {
+  width: 75px;
+  height: 30px;
+  margin-bottom: 20px;
+  border: solid 3px #373333;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #373333;
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(156, 140, 111, 0.6);
+    transition: ease 1s background-color;
+    transform: scale(1.1);
+  }
+  &__link {
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-primary;
+    font-weight: 700;
+    color: #373333;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.fa-trash {
+  padding-right: 8px;
+  color: #373333;
+}
+.container {
+  padding-top: 21px;
+  padding-bottom: 10px;
+}
+.palette-1 {
+  .tittlescontainer {
+    border-left: solid 5px $color-palette1-medium;
+  }
+
+  .photocard__title {
+    color: $color-palette1-dark;
+  }
+  .photocard__title2 {
+    color: $color-palette1-dark;
+  }
+  .photocard__list--item {
+    border: solid 2px $color-palette1-medium;
+  }
+  .photocard__list--link {
+    color: $color-palette1-dark;
+  }
+}
+.palette-2 {
+  .tittlescontainer {
+    border-left: solid 5px $color-palette2-medium;
+  }
+
+  .photocard__title {
+    color: $color-palette2-dark;
+  }
+  .photocard__title2 {
+    color: $color-palette2-dark;
+  }
+
+  .photocard__list--link {
+    color: $color-palette2-dark;
+  }
+  .photocard__list--item {
+    border: solid 2px $color-palette2-medium;
+  }
+}
+.palette-3 {
+  .tittlescontainer {
+    border-left: solid 5px $color-palette3-medium;
+  }
+  .photocard__title {
+    color: $color-palette3-dark;
+  }
+  .photocard__title2 {
+    color: $color-palette3-dark;
+  }
+
+  .photocard__list--item {
+    border: solid 2px $color-palette3-medium;
+  }
+  .photocard__list--link {
+    color: $color-palette3-dark;
+  }
+}
+.palette-4 {
+  .tittlescontainer {
+    border-left: solid 5px $color-palette4-medium;
+  }
+  .photocard__title {
+    color: $color-palette4-dark;
+  }
+
+  .photocard__title2 {
+    color: $color-palette4-dark;
+  }
+  .photocard__list--item {
+    border: solid 2px $color-palette4-medium;
+  }
+  .photocard__list--link {
+    color: $color-palette4-dark;
+  }
+}
+
+.photocard {
+  align-items: center;
+  background-color: $color-background-landing;
+  width: 240px;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 $color-shadow1, 0 1px 3px $color-shadow2;
+
+  &__title {
+    padding: 0 14px 0 15px;
+    font-size: 18px;
+    text-transform: capitalize;
+    line-height: 1.11;
+    font-weight: bold;
+    font-family: $font-cards;
+  }
+
+  &__title2 {
+    font-family: $font-cards;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 0 52px 0 15px;
+  }
+  &__img {
+    width: 240px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/photo-preview2.jpg");
+    background-repeat: no-repeat;
+  }
+  &__list {
+    :hover {
+      transform: scale(1.1);
+    }
+    display: flex;
+    padding: 10px 62px 12px 20px;
+    &--item {
+      width: 32px;
+      height: 32px;
+      margin: 0 10px 0 0;
+      border: solid 2px $color-palette1-light;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &--link {
+      text-decoration: none;
+    }
+  }
+}

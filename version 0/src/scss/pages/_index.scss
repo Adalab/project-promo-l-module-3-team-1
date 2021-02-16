@@ -1,0 +1,13 @@
+.page-landing {
+  height: 100vh;
+  background-image: url(../images/arboles/arbol4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.central-column {
+  padding: 0px 35px;
+  @media all and (min-width: 768px) {
+    padding: 0px 175px;
+  }
+}
