@@ -1,4 +1,5 @@
-import "../stylesheets/App.scss";
+import "../stylesheets/layout/_footer.scss";
+
 import footerLogo from "../images/logo-adalab.png";
 
 function Footer() {
