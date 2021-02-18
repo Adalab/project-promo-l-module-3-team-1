@@ -1,19 +1,10 @@
-import "../stylesheets/App.scss";
+import CollapsHeader from './CollapsHeader';
 
 function Form() {
   return (
     <form className="main-cards__sections--form">
       <section className=" js-collapsable-container">
-        <h2 className="section-title js-collapsable-header">
-          <div className="title-icon">
-            <span className="article__list--icon fas fa fa-object-ungroup "></span>
-            <span className="title">Diseña</span>
-          </div>
-          <span className="">
-            <i className="fa fa-leaf" aria-hidden="true"></i>
-          </span>
-        </h2>
-
+        <CollapsHeader icon="fa-object-ungroup" title="Diseña" />
         <div className="design hidden__container collapsable--close">
           <h3 className="design__title">Colores</h3>
           <div>
@@ -82,15 +73,7 @@ function Form() {
         </div>
       </section>
       <section className="fill js-collapsable-container collapsable--close">
-        <h2 className="section-title js-collapsable-header">
-          <div className="title-icon">
-            <span className="article__list--icon fas fa fa-keyboard-o"></span>
-            <span className="title">Rellena</span>
-          </div>
-          <span className="">
-            <i className="fa fa-leaf" aria-hidden="true"></i>
-          </span>
-        </h2>
+        <CollapsHeader icon="fa-keyboard-o" title="Rellena" />
 
         <div className="hidden__container fill__form">
           <label className="fill__form--labels" htmlFor="fullName">
@@ -178,15 +161,8 @@ function Form() {
         </div>
       </section>
       <section className="sharecards js-collapsable-container collapsable--close">
-        <h2 className="section-title js-collapsable-header">
-          <div className="title-icon">
-            <span className="article__list--icon fas fa fa-share-alt"></span>
-            <span className="title">Comparte</span>
-          </div>
-          <span className="">
-            <i className="fa fa-leaf" aria-hidden="true"></i>
-          </span>
-        </h2>
+        <CollapsHeader icon="fa-share-alt" title="Comparte" />
+
         {/*Share open*/}
 
         <div className="section__share__container hidden__container">
