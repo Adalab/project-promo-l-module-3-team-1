@@ -1,4 +1,5 @@
-import CollapsHeader from './CollapsHeader';
+import CollapsHeader from "./CollapsHeader";
+import Share from "./Share";
 
 function Form() {
   return (
@@ -160,20 +161,7 @@ function Form() {
           />
         </div>
       </section>
-      <section className="sharecards js-collapsable-container collapsable--close">
-        <CollapsHeader icon="fa-share-alt" title="Comparte" />
-
-        {/*Share open*/}
-
-        <div className="section__share__container hidden__container">
-          <button className="button__create js-create-btn js-collapsable-container js-hidden">
-            <i className="fa fa-address-card-o" aria-hidden="true"></i>
-            Crear tarjeta
-          </button>
-
-          <div className="section__share__create js-card-result js-hidden-collapsable hidden"></div>
-        </div>
-      </section>
+      <Share />
     </form>
   );
 }
