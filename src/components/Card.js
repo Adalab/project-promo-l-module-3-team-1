@@ -1,4 +1,8 @@
 import "../stylesheets/App.scss";
+// import "../stylesheets/core/_reset.scss";
+// import "../stylesheets/core/_variables.scss";
+// import "../stylesheets/layout/_main-cards.scss";
+// import "../stylesheets/layout/_photocard.scss";
 
 function Card() {
   return (
