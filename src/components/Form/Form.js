@@ -1,5 +1,6 @@
-import CollapsHeader from "./CollapsHeader";
-import Share from "./Share";
+import CollapsHeader from './CollapsHeader';
+import Fill from './Fill';
+import Share from './Share';
 
 function Form() {
   return (
@@ -73,94 +74,7 @@ function Form() {
           </div>
         </div>
       </section>
-      <section className="fill js-collapsable-container collapsable--close">
-        <CollapsHeader icon="fa-keyboard-o" title="Rellena" />
-
-        <div className="hidden__container fill__form">
-          <label className="fill__form--labels" htmlFor="fullName">
-            Nombre completo*
-          </label>
-          <input
-            id="fullName"
-            type="text"
-            name="fullName"
-            placeholder="Ej: Sally Jill"
-            className="fill__form--inputs js-name js-input-name js-input-text"
-          />
-          <label className="fill__form--labels" htmlFor="position">
-            Puesto*
-          </label>
-          <input
-            id="position"
-            type="text"
-            name="position"
-            placeholder="Ej: Front-end unicorn"
-            className="fill__form--inputs js-position js-input-job js-input-text"
-          />
-          <div className="fill__form--image-profile">
-            <span className="fill__form--labels">Imagen de perfil*</span>
-
-            <div className="button-box-container">
-              <label
-                className="fill__form--button js__profile-trigger"
-                htmlFor="add"
-              >
-                Añadir imagen
-              </label>
-              <input
-                type="file"
-                name=""
-                id="add"
-                className="js__profile-upload-btn"
-              />
-              <span className="fill__form--box js__profile-preview"></span>
-            </div>
-          </div>
-          <label className="fill__form--labels" htmlFor="">
-            Email*
-          </label>
-          <input
-            id="emailAddress"
-            type="email"
-            name="emailAddress"
-            placeholder="Ej: sally-hill@gmail.com"
-            className="fill__form--inputs js-input-email js-input-text"
-            value=" "
-          />
-          <label className="fill__form--labels" htmlFor="telephone">
-            Teléfono*
-          </label>
-          <input
-            id="telephone"
-            type="tel"
-            name="telephone"
-            placeholder="Ej: 555-55-55-55"
-            className="fill__form--inputs js-input-phone js-input-text"
-          />
-
-          <label className="fill__form--labels" htmlFor="linkedin">
-            Linkedin*
-          </label>
-          <input
-            id="linkedin"
-            type="url"
-            name="linkedin"
-            placeholder="Ej: linkedin.com/in/sally.hill"
-            className="fill__form--inputs js-input-linkedin js-input-text"
-          />
-
-          <label className="fill__form--labels" htmlFor="github">
-            Github*
-          </label>
-          <input
-            id="github"
-            type="url"
-            name="github"
-            placeholder="Ej: @sally-hill"
-            className="fill__form--inputs js-input-github js-input-text "
-          />
-        </div>
-      </section>
+      <Fill />
       <Share />
     </form>
   );
