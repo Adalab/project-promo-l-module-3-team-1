@@ -1,4 +1,4 @@
-import "../stylesheets/App.scss";
+import "../../stylesheets/App.scss";
 
 function ResetButton() {
   return (
