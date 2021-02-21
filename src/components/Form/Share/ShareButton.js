@@ -1,4 +1,4 @@
-import "../../stylesheets/layout/_share-cards.scss";
+import "../../../stylesheets/layout/_share-cards.scss";
 
 function ShareButton() {
   return (

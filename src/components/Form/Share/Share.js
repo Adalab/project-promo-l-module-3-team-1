@@ -1,4 +1,4 @@
-import CollapsHeader from "./CollapsHeader";
+import CollapsHeader from "../CollapsHeader";
 import ShareButton from "./ShareButton";
 
 function Share() {

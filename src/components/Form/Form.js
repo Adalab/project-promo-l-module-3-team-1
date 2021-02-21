@@ -1,6 +1,6 @@
-import Fill from './Fill';
-import Share from './Share';
-import Design from './Design/Design';
+import Fill from "./Fill/Fill";
+import Share from "./Share/Share";
+import Design from "./Design/Design";
 
 function Form() {
   return (

@@ -1,5 +1,6 @@
-import CollapsHeader from './CollapsHeader';
-import Input from './Inputs';
+import CollapsHeader from "../CollapsHeader";
+import ImageProfile from "./ImageProfile";
+import Input from "./Inputs";
 
 function Fill() {
   return (
@@ -19,26 +20,6 @@ function Fill() {
           className=" js-position js-input-job"
         />
 
-        <div className="fill__form--image-profile">
-          <span className="fill__form--labels">Imagen de perfil*</span>
-
-          <div className="button-box-container">
-            <label
-              className="fill__form--button js__profile-trigger"
-              htmlFor="add"
-            >
-              Añadir imagen
-            </label>
-            <input
-              type="file"
-              name=""
-              id="add"
-              className="js__profile-upload-btn"
-            />
-            <span className="fill__form--box js__profile-preview"></span>
-          </div>
-        </div>
-
         <Input
           name="emailAddress"
           label="Email*"
@@ -47,6 +28,8 @@ function Fill() {
           className="js-input-email"
           value=" "
         />
+
+        <ImageProfile />
 
         <Input
           name="telephone"
