@@ -5,15 +5,14 @@ function Input(props) {
         {props.label}
       </label>
       <input
-        className={
-          'fill__form--inputs  js-' + props.className + ' js-input-text'
-        }
+        className={'fill__form--inputs' + props.className + ' js-input-text'}
         type={props.type}
         name={props.name}
         id={props.name}
         placeholder={props.placeholder}
         required
-        /*    {props.children} Duda value del mail*/
+        value={props.value}
+        /*   {props.children} */
       />
     </>
   );
