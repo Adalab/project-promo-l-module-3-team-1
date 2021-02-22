@@ -1,15 +1,15 @@
-import '../../../stylesheets/layout/_design.scss';
+import "../../../stylesheets/layout/_design.scss";
 
 function Palette(props) {
   return (
     <div className="design__palette">
       <label className="design__label">
         <input
-          className=" design__radio js-palette"
+          className=" design__radio"
           type="radio"
           name="palette"
           value={props.value}
-          checked /* don't know how to check first palette */
+          checked={props.palette === props.value}
         />
         <ul className={props.ulClass}>
           <li className="design__square--color color1">Color 1</li>

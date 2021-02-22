@@ -1,11 +1,12 @@
-import CollapsHeader from "../CollapsHeader";
+import Collapsable from "../Collapsable";
 import ShareButton from "./ShareButton";
 
 function Share() {
   return (
-    <section className="sharecards js-collapsable-container collapsable--close">
-      <CollapsHeader icon="fa-share-alt" title="Comparte" />
-      <ShareButton />
+    <section className="sharecards">
+      <Collapsable icon="fa-share-alt" title="Comparte">
+        <ShareButton />
+      </Collapsable>
     </section>
   );
 }

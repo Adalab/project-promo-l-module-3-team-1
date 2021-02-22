@@ -1,60 +1,61 @@
-import CollapsHeader from "../CollapsHeader";
+import Collapsable from "../Collapsable";
 import ImageProfile from "./ImageProfile";
 import Input from "./Inputs";
 
 function Fill() {
   return (
-    <section className="fill js-collapsable-container collapsable--close">
-      <CollapsHeader icon="fa-keyboard-o" title="Rellena" />
-      <div className="hidden__container fill__form">
-        <Input
-          name="fullName"
-          label="Nombre completo*"
-          placeholder="Ej: Sally Jill"
-          classname="js-name js-input-name"
-        />
-        <Input
-          name="position"
-          label="Puesto*"
-          placeholder="Ej: Front-end unicorn"
-          className=" js-position js-input-job"
-        />
+    <section className="fill">
+      <Collapsable icon="fa-keyboard-o" title="Rellena">
+        <div className="hidden__content fill__form">
+          <Input
+            name="fullName"
+            label="Nombre completo*"
+            placeholder="Ej: Sally Jill"
+            classname=""
+          />
+          <Input
+            name="position"
+            label="Puesto*"
+            placeholder="Ej: Front-end unicorn"
+            className=""
+          />
 
-        <Input
-          name="emailAddress"
-          label="Email*"
-          type="email"
-          placeholder="Ej: sally-hill@gmail.com"
-          className="js-input-email"
-          value=" "
-        />
+          <Input
+            name="emailAddress"
+            label="Email*"
+            type="email"
+            placeholder="Ej: sally-hill@gmail.com"
+            className=""
+            value=" "
+          />
 
-        <ImageProfile />
+          <ImageProfile />
 
-        <Input
-          name="telephone"
-          label="Teléfono*"
-          type="tel"
-          placeholder="Ej: 555-55-55-55"
-          className="js-input-phone"
-        />
+          <Input
+            name="telephone"
+            label="Teléfono*"
+            type="tel"
+            placeholder="Ej: 555-55-55-55"
+            className=""
+          />
 
-        <Input
-          name="linkedin"
-          label="Linkedin*"
-          type="url"
-          placeholder="Ej: linkedin.com/in/sally.hill"
-          className=" js-input-linkedin"
-        />
+          <Input
+            name="linkedin"
+            label="Linkedin*"
+            type="url"
+            placeholder="Ej: linkedin.com/in/sally.hill"
+            className=""
+          />
 
-        <Input
-          name="github"
-          label="Github*"
-          type="url"
-          placeholder="Ej: @sally-hill"
-          className="js-input-github"
-        />
-      </div>
+          <Input
+            name="github"
+            label="Github*"
+            type="url"
+            placeholder="Ej: @sally-hill"
+            className=""
+          />
+        </div>
+      </Collapsable>
     </section>
   );
 }

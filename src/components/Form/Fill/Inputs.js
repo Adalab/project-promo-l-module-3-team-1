@@ -5,17 +5,16 @@ function Input(props) {
         {props.label}
       </label>
       <input
-        className={'fill__form--inputs' + props.className + ' js-input-text'}
+        className={`fill__form--inputs ${props.className}`}
         type={props.type}
         name={props.name}
         id={props.name}
         placeholder={props.placeholder}
         required
-        value={props.value}
         /*   {props.children} */
       />
     </>
   );
 }
-Input.defaultProps = { type: 'text' };
+Input.defaultProps = { type: "text" };
 export default Input;
