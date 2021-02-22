@@ -1,4 +1,5 @@
-import "../../stylesheets/App.scss";
+import '../../stylesheets/App.scss';
+import previewPhoto from '../../images/photo-preview2.jpg';
 
 function PreviewCard() {
   return (
@@ -32,4 +33,12 @@ function PreviewCard() {
     </article>
   );
 }
+
+/* DEFAULT.PROPS de nombre, job y foto hasta ver eventos */
+/* PreviewCard.defaultProps = {
+  name: 'Nombre Apellido',
+  job: 'Front-end developer',
+  photo: previewPhoto,
+}; */
+
 export default PreviewCard;
