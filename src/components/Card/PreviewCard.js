@@ -17,22 +17,31 @@ function PreviewCard(props) {
       <div className="photocard__img"></div>
       <ul className="photocard__list">
         <li className="photocard__list--item">
+          <a href="" className=" photocard__list--link icon fa fa-mobile"></a>
+        </li>
+
+        <li className="photocard__list--item">
           <a
             href={props.email ? `mailto:${props.email}` : "#"}
-            className=" photocard__list--link icon fa fa-mobile"
+            className=" photocard__list--link icon fa fa-envelope"
           ></a>
         </li>
 
         <li className="photocard__list--item">
-          <a href="" className=" photocard__list--link icon fa fa-envelope"></a>
-        </li>
-
-        <li className="photocard__list--item">
-          <a href="" className=" photocard__list--link icon fa fa-linkedin"></a>
+          <a
+            href={
+              props.linkedin
+                ? `https://www.linkedin.com/in/${props.linkedin}`
+                : "#"
+            }
+            target="_blank"
+            className=" photocard__list--link icon fa fa-linkedin"
+          ></a>
         </li>
         <li className="photocard__list--item">
           <a
-            href=""
+            href={props.github ? `https://www.github.com/${props.github}` : "#"}
+            target="_blank"
             className=" photocard__list--link  icon fa fa-github-alt  "
           ></a>
         </li>

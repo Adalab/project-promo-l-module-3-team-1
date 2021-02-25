@@ -7,7 +7,13 @@ function Form(props) {
   return (
     <form className="main-cards__sections--form">
       <Design />
-      <Fill name={props.name} job={props.job} handleInput={props.handleInput} />
+      <Fill
+        name={props.name}
+        job={props.job}
+        linkedin={props.linkedin}
+        github={props.github}
+        handleInput={props.handleInput}
+      />
       <Share />
     </form>
   );

@@ -6,7 +6,12 @@ function Card(props) {
   return (
     <section className="photo">
       <ResetButton />
-      <PreviewCard name={props.name} job={props.job} />
+      <PreviewCard
+        name={props.name}
+        job={props.job}
+        linkedin={props.linkedin}
+        github={props.github}
+      />
     </section>
   );
 }
