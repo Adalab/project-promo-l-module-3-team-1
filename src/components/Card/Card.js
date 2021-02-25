@@ -2,11 +2,11 @@ import "../../stylesheets/App.scss";
 import ResetButton from "./ResetButton";
 import PreviewCard from "./PreviewCard";
 
-function Card() {
+function Card(props) {
   return (
     <section className="photo">
       <ResetButton />
-      <PreviewCard />
+      <PreviewCard name={props.name} job={props.job} />
     </section>
   );
 }
