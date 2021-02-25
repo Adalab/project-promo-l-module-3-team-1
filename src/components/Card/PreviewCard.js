@@ -18,7 +18,7 @@ function PreviewCard(props) {
       <ul className="photocard__list">
         <li className="photocard__list--item">
           <a
-            href={props.phone || "#"}
+            href={props.phone ? `tel:${props.phone}` : "#"}
             className=" photocard__list--link icon fa fa-mobile"
           ></a>
         </li>
