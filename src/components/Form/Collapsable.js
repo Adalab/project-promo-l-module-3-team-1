@@ -24,6 +24,7 @@ function Collapsable(props) {
         className={`hidden__content ${
           isOpen === true ? "" : "collapsable--close"
         }`}
+        /*    ${isOpen === false ? "" : "collapsable--close"}`} */
       >
         {props.children}
       </div>

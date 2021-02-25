@@ -2,22 +2,26 @@ import Collapsable from "../Collapsable";
 import ImageProfile from "./ImageProfile";
 import Input from "./Inputs";
 
-function Fill() {
+function Fill(props) {
   return (
     <section className="fill">
       <Collapsable icon="fa-keyboard-o" title="Rellena">
         <div className="hidden__content fill__form">
           <Input
-            name="fullName"
+            name="name"
             label="Nombre completo*"
             placeholder="Ej: Sally Jill"
             classname=""
+            value={props.name}
+            handleInput={props.handleInput}
           />
           <Input
-            name="position"
+            name="job"
             label="Puesto*"
             placeholder="Ej: Front-end unicorn"
             className=""
+            value={props.job}
+            handleInput={props.handleInput}
           />
 
           <Input
