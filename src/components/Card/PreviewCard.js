@@ -18,13 +18,16 @@ function PreviewCard(props) {
       <ul className="photocard__list">
         <li className="photocard__list--item">
           <a
-            href={props.email ? `mailto:${props.email}` : "#"}
+            href={props.phone || "#"}
             className=" photocard__list--link icon fa fa-mobile"
           ></a>
         </li>
 
         <li className="photocard__list--item">
-          <a href="" className=" photocard__list--link icon fa fa-envelope"></a>
+          <a
+            href={props.email ? `mailto:${props.email}` : "#"}
+            className=" photocard__list--link icon fa fa-envelope"
+          ></a>
         </li>
 
         <li className="photocard__list--item">
