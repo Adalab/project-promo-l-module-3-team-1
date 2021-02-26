@@ -12,6 +12,8 @@ function Card(props) {
         palettes={props.palettes}
         email={props.email}
         phone={props.phone}
+        linkedin={props.linkedin}
+        github={props.github}
       />
     </section>
   );

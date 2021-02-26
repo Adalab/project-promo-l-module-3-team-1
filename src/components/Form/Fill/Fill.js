@@ -52,6 +52,8 @@ function Fill(props) {
             type="url"
             placeholder="Ej: linkedin.com/in/sally.hill"
             className=""
+            value={props.linkedin}
+            handleInput={props.handleInput}
           />
 
           <Input
@@ -60,6 +62,8 @@ function Fill(props) {
             type="url"
             placeholder="Ej: @sally-hill"
             className=""
+            value={props.github}
+            handleInput={props.handleInput}
           />
         </div>
       </Collapsable>

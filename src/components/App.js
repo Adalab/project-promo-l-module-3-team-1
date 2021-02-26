@@ -6,15 +6,17 @@ import Card from "./Card/Card";
 import Footer from "./Footer";
 
 import React, { useState } from "react";
+
 function App() {
   const [palettes, setPalettes] = useState(1);
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+  const [github, setGithub] = useState("");
 
   const handleInput = (inputKey, inputValue) => {
-    console.log(inputKey, inputValue);
     if (inputKey === "name") {
       setName(inputValue);
     } else if (inputKey === "job") {
@@ -25,6 +27,10 @@ function App() {
       setEmail(inputValue);
     } else if (inputKey === "phone") {
       setPhone(inputValue);
+    } else if (inputKey === "linkedin") {
+      setLinkedin(inputValue);
+    } else if (inputKey === "github") {
+      setGithub(inputValue);
     }
   };
 
@@ -39,6 +45,8 @@ function App() {
             email={email}
             phone={phone}
             palettes={palettes}
+            linkedin={linkedin} 
+            github={github}
           />
           <Form
             name={name}
@@ -46,6 +54,8 @@ function App() {
             email={email}
             phone={phone}
             palettes={palettes}
+            linkedin={linkedin} 
+            github={github}
             handleInput={handleInput}
           />
         </div>
@@ -54,5 +64,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
