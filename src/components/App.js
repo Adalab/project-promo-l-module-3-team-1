@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 function App() {
   const [name, setName] = useState('');
   const [job, setJob] = useState('');
-  const [palettes, setPalette] = useState('1');
+  const [palettes, setPalettes] = useState(1);
 
   const handleInput = (inputKey, inputValue) => {
     console.log(inputKey, inputValue);
@@ -17,8 +17,8 @@ function App() {
       setName(inputValue);
     } else if (inputKey === 'job') {
       setJob(inputValue);
-    } else if (inputKey === 'palettes') {
-      setPalette(inputValue.toString());
+    } else if (inputKey === 'palette') {
+      setPalettes(inputValue);
     }
   };
 
