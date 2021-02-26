@@ -1,15 +1,19 @@
-import "../../../stylesheets/layout/_design.scss";
+import '../../../stylesheets/layout/_design.scss';
 
 function Palette(props) {
+  const handlePalettes = (event) => {
+    props.handleInput(event.target.name, event.target.value);
+  };
   return (
     <div className="design__palette">
       <label className="design__label">
         <input
           className=" design__radio"
           type="radio"
-          name="palette"
+          name={props.palettes}
           value={props.value}
-          checked={props.palette === props.value}
+          handleInput={props.handleInput}
+          onChange={handlePalettes}
         />
         <ul className={props.ulClass}>
           <li className="design__square--color color1">Color 1</li>

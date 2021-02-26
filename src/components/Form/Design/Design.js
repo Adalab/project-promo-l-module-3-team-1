@@ -1,12 +1,12 @@
-import Collapsable from "../Collapsable";
-import Palettes from "./Palettes";
+import Collapsable from '../Collapsable';
+import Palettes from './Palettes';
 
-function Design() {
+function Design(props) {
   // esto lo recibiremos de una prop
-  const palette = 1;
+
   return (
     <Collapsable icon="fa-object-ungroup" title="Diseña">
-      <Palettes palette={palette} />
+      <Palettes palettes={props.palettes} handleInput={props.handleInput} />
     </Collapsable>
   );
 }
