@@ -5,7 +5,7 @@ function Palettes(props) {
   console.log(props.palettes);
 
   return (
-    <div className="design">
+    <div className="design hidden__content">
       <h3 className="design__title">Colores</h3>
       <div>
         <Palette
