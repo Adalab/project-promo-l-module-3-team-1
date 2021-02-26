@@ -1,51 +1,59 @@
-import "../stylesheets/App.scss";
+import '../stylesheets/App.scss';
 
-import Header from "./Header";
-import Form from "./Form/Form";
-import Card from "./Card/Card";
-import Footer from "./Footer";
+import Header from './Header';
+import Form from './Form/Form';
+import Card from './Card/Card';
+import Footer from './Footer';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function App() {
   const [palettes, setPalettes] = useState(1);
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
+  const [name, setName] = useState('');
+  const [job, setJob] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  const [github, setGithub] = useState('');
 
   const handleInput = (inputKey, inputValue) => {
-    if (inputKey === "name") {
+    if (inputKey === 'name') {
       setName(inputValue);
-    } else if (inputKey === "job") {
+    } else if (inputKey === 'job') {
       setJob(inputValue);
-    } else if (inputKey === "palette") {
+    } else if (inputKey === 'palette') {
       setPalettes(inputValue);
-    } else if (inputKey === "email") {
+    } else if (inputKey === 'email') {
       setEmail(inputValue);
-    } else if (inputKey === "phone") {
+    } else if (inputKey === 'phone') {
       setPhone(inputValue);
-    } else if (inputKey === "linkedin") {
+    } else if (inputKey === 'linkedin') {
       setLinkedin(inputValue);
-    } else if (inputKey === "github") {
+    } else if (inputKey === 'github') {
       setGithub(inputValue);
     }
   };
-
+  const handleReset = () => {
+    setName('');
+    setJob('');
+    setEmail('');
+    setPhone('');
+    setLinkedin('');
+    setGithub('');
+  };
   return (
     <div>
       <Header />
       <main className="main-cards">
         <div className="main-cards__sections">
           <Card
+            getBtnReset={handleReset}
             name={name}
             job={job}
             email={email}
             phone={phone}
             palettes={palettes}
-            linkedin={linkedin} 
+            linkedin={linkedin}
             github={github}
           />
           <Form
@@ -54,7 +62,7 @@ function App() {
             email={email}
             phone={phone}
             palettes={palettes}
-            linkedin={linkedin} 
+            linkedin={linkedin}
             github={github}
             handleInput={handleInput}
           />

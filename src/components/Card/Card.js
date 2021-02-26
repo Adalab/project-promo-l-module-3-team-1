@@ -1,11 +1,14 @@
-import "../../stylesheets/App.scss";
-import ResetButton from "./ResetButton";
-import PreviewCard from "./PreviewCard";
+import '../../stylesheets/App.scss';
+import ResetButton from './ResetButton';
+import PreviewCard from './PreviewCard';
 
 function Card(props) {
+  const handleReset = () => {
+    props.getBtnReset();
+  };
   return (
     <section className="photo">
-      <ResetButton />
+      <ResetButton getReset={handleReset} />
       <PreviewCard
         name={props.name}
         job={props.job}
