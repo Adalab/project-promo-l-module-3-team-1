@@ -1,4 +1,5 @@
-import '../stylesheets/App.scss';
+import '../stylesheets/layout/_appMain.scss';
+/* import '../stylesheets/App.scss'; */
 
 import Header from './Header';
 import Form from './Form/Form';
@@ -42,7 +43,7 @@ function App() {
     setGithub('');
   };
   return (
-    <div>
+    <>
       <Header />
       <main className="main-cards">
         <div className="main-cards__sections">
@@ -69,7 +70,7 @@ function App() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 export default App;

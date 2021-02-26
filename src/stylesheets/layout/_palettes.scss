@@ -1,0 +1,37 @@
+@import '../core/variables.scss';
+@import '../core/reset.scss';
+@import '../layout/collapsable.scss';
+
+.design {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  &__radio {
+    margin-right: 10px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-size: 14px;
+    margin: 22px 0px 0px 39px;
+  }
+
+  &__square {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    &--color {
+      color: transparent;
+      background-color: red;
+      width: 30px;
+      height: 25px;
+    }
+  }
+}

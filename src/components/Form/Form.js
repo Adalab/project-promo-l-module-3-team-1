@@ -1,6 +1,7 @@
 import Fill from './Fill/Fill';
 import Share from './Share/Share';
 import Design from './Design/Design';
+import '../../stylesheets/pages/_cards.scss';
 
 function Form(props) {
   const handleForm = (ev) => {

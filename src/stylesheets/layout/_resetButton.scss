@@ -1,0 +1,44 @@
+@import '../core/_variables.scss';
+@import '../core/_reset.scss';
+
+.photo-container {
+  margin-top: 20px;
+}
+
+.photo-button {
+  width: 75px;
+  height: 30px;
+  margin-bottom: 20px;
+  border: solid 3px #373333;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #373333;
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(156, 140, 111, 0.6);
+    transition: ease 1s background-color;
+    transform: scale(1.1);
+  }
+  &__link {
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-primary;
+    font-weight: 700;
+    color: #373333;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.fa-trash {
+  padding-right: 8px;
+  color: #373333;
+}

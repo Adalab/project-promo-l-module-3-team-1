@@ -1,6 +1,8 @@
-import Collapsable from "../Collapsable";
-import ImageProfile from "./ImageProfile";
-import Input from "./Inputs";
+import Collapsable from '../Collapsable';
+import ImageProfile from './ImageProfile';
+import Input from './Inputs';
+
+import '../../../stylesheets/layout/_fill.scss';
 
 function Fill(props) {
   return (

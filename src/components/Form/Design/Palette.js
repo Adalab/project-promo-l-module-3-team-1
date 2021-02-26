@@ -1,4 +1,4 @@
-import '../../../stylesheets/layout/_design.scss';
+import '../../../stylesheets/layout/_palette.scss';
 
 function Palette(props) {
   const handlePalettes = (event) => {

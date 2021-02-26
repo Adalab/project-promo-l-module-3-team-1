@@ -12,7 +12,7 @@ function Collapsable(props) {
   };
 
   return (
-    <section className="">
+    <>
       {/* header */}
       <div className="section-title" onClick={handleClick}>
         <div className="title-icon">
@@ -30,7 +30,7 @@ function Collapsable(props) {
       >
         {props.children}
       </div>
-    </section>
+    </>
   );
 }
 

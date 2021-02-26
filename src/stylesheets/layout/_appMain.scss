@@ -1,3 +1,6 @@
+@import '../core/variables';
+@import '../core/reset';
+
 .main-cards {
   flex-direction: column;
   justify-content: center;
@@ -24,7 +27,7 @@
 }
 
 .title1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: #54585a;

@@ -1,80 +1,29 @@
-@import '../core/variables.scss';
-@import '../core/reset.scss';
-
-.design {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  &__label {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+.collapsable--close {
+  .hidden__content {
+    display: none;
   }
-  &__radio {
-    margin-right: 10px;
-  }
-
-  &__title {
-    text-transform: uppercase;
-    color: $color-secondary;
-    font-size: 14px;
-    margin: 22px 0px 0px 39px;
-  }
-
-  &__square {
-    display: flex;
-    flex-direction: row;
-    margin-right: 25px;
-    &--color {
-      color: transparent;
-      background-color: red;
-      width: 30px;
-      height: 25px;
-    }
+  .fa-leaf {
+    color: #545454;
+    animation: intro;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
   }
 }
-.palette-1 {
-  .color1 {
-    background-color: $color-palette1-dark;
+
+//Animación (esta o similar) a modo de sugerencia
+/* .fa {
+  animation: intro;
+  animation-timing-function: ease 2;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+} */
+
+@keyframes intro {
+  from {
+    transform: rotate(0deg);
   }
-  .color2 {
-    background-color: $color-palette1-medium;
-  }
-  .color3 {
-    background-color: $color-palette1-light;
-  }
-}
-.palette-2 {
-  .color1 {
-    background-color: $color-palette2-dark;
-  }
-  .color2 {
-    background-color: $color-palette2-medium;
-  }
-  .color3 {
-    background-color: $color-palette2-light;
-  }
-}
-.palette-3 {
-  .color1 {
-    background-color: $color-palette3-dark;
-  }
-  .color2 {
-    background-color: $color-palette3-medium;
-  }
-  .color3 {
-    background-color: $color-palette3-light;
-  }
-}
-.palette-4 {
-  .color1 {
-    background-color: $color-palette4-dark;
-  }
-  .color2 {
-    background-color: $color-palette4-medium;
-  }
-  .color3 {
-    background-color: $color-palette4-light;
+  to {
+    transform: rotate(360deg);
   }
 }

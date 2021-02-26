@@ -1,0 +1,28 @@
+@import '../core/_variables.scss';
+@import '../core/_reset.scss';
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 38px 35px 40px 45px;
+  background-image: url(../../images/Esquema.png);
+  /*   linear-gradient(
+    to bottom,
+    $colorBackSilver,
+    $colorBackGrey
+  ); */
+  @media all and (min-width: 768px) {
+    width: 329px;
+    padding: 0px 44px 260px 45px;
+    margin: 20px 40px 20px 0;
+    border-radius: 6px;
+  }
+
+  @media all and (min-width: 1024px) {
+    width: 57%;
+    padding: 100px 172px 260px 173px;
+  }
+}
