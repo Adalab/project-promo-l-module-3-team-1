@@ -1,6 +1,6 @@
-import '../../stylesheets/App.scss';
-import ResetButton from './ResetButton';
-import PreviewCard from './PreviewCard';
+import "../../stylesheets/App.scss";
+import ResetButton from "./ResetButton";
+import PreviewCard from "./PreviewCard";
 
 function Card(props) {
   return (
@@ -10,6 +10,8 @@ function Card(props) {
         name={props.name}
         job={props.job}
         palettes={props.palettes}
+        email={props.email}
+        phone={props.phone}
       />
     </section>
   );
