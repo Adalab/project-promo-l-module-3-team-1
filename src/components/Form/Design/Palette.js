@@ -1,4 +1,4 @@
-import "../../../stylesheets/layout/_design.scss";
+import '../../../stylesheets/layout/_design.scss';
 
 function Palette(props) {
   return (
