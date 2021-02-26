@@ -25,22 +25,25 @@ function Fill(props) {
           />
 
           <Input
-            name="emailAddress"
+            name="email"
             label="Email*"
             type="email"
             placeholder="Ej: sally-hill@gmail.com"
             className=""
-            value=" "
+            value={props.email}
+            handleInput={props.handleInput}
           />
 
           <ImageProfile />
 
           <Input
-            name="telephone"
+            name="phone"
             label="Teléfono*"
             type="tel"
             placeholder="Ej: 555-55-55-55"
             className=""
+            value={props.phone}
+            handleInput={props.handleInput}
           />
 
           <Input
@@ -49,6 +52,8 @@ function Fill(props) {
             type="url"
             placeholder="Ej: linkedin.com/in/sally.hill"
             className=""
+            value={props.linkedin}
+            handleInput={props.handleInput}
           />
 
           <Input
@@ -57,6 +62,8 @@ function Fill(props) {
             type="url"
             placeholder="Ej: @sally-hill"
             className=""
+            value={props.github}
+            handleInput={props.handleInput}
           />
         </div>
       </Collapsable>

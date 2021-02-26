@@ -8,23 +8,23 @@ function Palettes(props) {
       <div>
         <Palette
           value={1}
-          ulClass="design__square palette-1"
-          palette={props.palette}
+          palettes={props.palettes}
+          handleInput={props.handleInput}
         />
         <Palette
           value={2}
-          ulClass="design__square palette-2"
-          palette={props.palette}
+          palettes={props.palettes}
+          handleInput={props.handleInput}
         />
         <Palette
           value={3}
-          ulClass="design__square palette-3"
-          palette={props.palette}
+          palettes={props.palettes}
+          handleInput={props.handleInput}
         />
         <Palette
           value={4}
-          ulClass="design__square palette-4"
-          palette={props.palette}
+          palettes={props.palettes}
+          handleInput={props.handleInput}
         />
       </div>
     </div>

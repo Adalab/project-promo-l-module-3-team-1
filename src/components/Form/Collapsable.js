@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import "../../stylesheets/layout/_collapsable.scss";
+import '../../stylesheets/layout/_collapsable.scss';
 
 function Collapsable(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(
+    !!props.open
+  ); /* double negation transforms from undefined(falsy) to false */
 
   const handleClick = (ev) => {
     setIsOpen(!isOpen);
@@ -14,7 +16,7 @@ function Collapsable(props) {
       {/* header */}
       <div className="section-title" onClick={handleClick}>
         <div className="title-icon">
-          <span className={"article__list--icon fas fa " + props.icon}></span>
+          <span className={'article__list--icon fas fa ' + props.icon}></span>
           <span className="title">{props.title}</span>
         </div>
         <i className="fa fa-leaf" aria-hidden="true"></i>
@@ -22,7 +24,7 @@ function Collapsable(props) {
       {/* content */}
       <div
         className={`hidden__content ${
-          isOpen === true ? "" : "collapsable--close"
+          isOpen === true ? '' : 'collapsable--close'
         }`}
         /*    ${isOpen === false ? "" : "collapsable--close"}`} */
       >
