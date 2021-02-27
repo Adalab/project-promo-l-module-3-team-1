@@ -10,17 +10,12 @@ function Collapsable(props) {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-    if (rotate === 'animate__animated animate__rotateIn') {
-      setRotate('');
-    } else {
-      setRotate('animate__animated animate__rotateIn');
-    }
-
-    if (rotateUp === '') {
-      setRotateUp('animate__animated animate__rotateInUpLeft');
-    } else {
-      setRotateUp('');
-    }
+    rotate === 'animate__animated animate__rotateIn'
+      ? setRotate('')
+      : setRotate('animate__animated animate__rotateIn');
+    rotateUp === ''
+      ? setRotateUp('animate__animated animate__rotateInUpLeft')
+      : setRotateUp('');
   };
 
   return (
