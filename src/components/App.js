@@ -41,6 +41,7 @@ function App() {
     setPhone('');
     setLinkedin('');
     setGithub('');
+    setPalettes(1);
   };
   return (
     <>
