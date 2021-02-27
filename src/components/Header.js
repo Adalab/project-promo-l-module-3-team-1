@@ -1,4 +1,4 @@
-import '../stylesheets/layout/_header.scss';
+import '../stylesheets/_header.scss';
 import headerLogo from '../images/logo-tree2GIF.gif';
 
 function Header() {

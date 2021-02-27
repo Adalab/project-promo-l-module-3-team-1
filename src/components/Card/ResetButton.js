@@ -1,4 +1,4 @@
-import '../../stylesheets/layout/_resetButton.scss';
+import '../../stylesheets/card/_resetButton.scss';
 
 function ResetButton(props) {
   const handleReset = () => {

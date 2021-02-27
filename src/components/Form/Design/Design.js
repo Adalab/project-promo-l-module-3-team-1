@@ -1,6 +1,6 @@
 import Collapsable from '../Collapsable';
 import Palettes from './Palettes';
-import '../../../stylesheets/layout/_design.scss';
+import '../../../stylesheets/form/design/_design.scss';
 
 function Design(props) {
   // esto lo recibiremos de una prop

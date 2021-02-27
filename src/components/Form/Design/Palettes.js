@@ -1,4 +1,4 @@
-import '../../../stylesheets/layout/_palettes.scss';
+import '../../../stylesheets/form/design/_palettes.scss';
 import Palette from './Palette';
 
 function Palettes(props) {

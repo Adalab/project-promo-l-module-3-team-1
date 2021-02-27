@@ -1,5 +1,4 @@
-import '../stylesheets/layout/_appMain.scss';
-/* import '../stylesheets/App.scss'; */
+import '../stylesheets/_app.scss';
 
 import Header from './Header';
 import Form from './Form/Form';

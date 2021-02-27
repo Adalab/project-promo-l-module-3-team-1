@@ -2,7 +2,7 @@ import Collapsable from '../Collapsable';
 import ImageProfile from './ImageProfile';
 import Input from './Inputs';
 
-import '../../../stylesheets/layout/_fill.scss';
+import '../../../stylesheets/form/fill/_fill.scss';
 
 function Fill(props) {
   return (

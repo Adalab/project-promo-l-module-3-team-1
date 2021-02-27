@@ -1,4 +1,4 @@
-import '../../stylesheets/layout/_previewCard.scss';
+import '../../stylesheets/card/_previewCard.scss';
 import previewPhoto from '../../images/photo-preview2.jpg';
 
 function PreviewCard(props) {

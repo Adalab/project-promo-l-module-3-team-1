@@ -1,4 +1,4 @@
-import '../../stylesheets/layout/_card.scss';
+import '../../stylesheets/card/_card.scss';
 import ResetButton from './ResetButton';
 import PreviewCard from './PreviewCard';
 
