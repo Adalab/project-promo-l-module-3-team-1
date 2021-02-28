@@ -3,9 +3,12 @@ import ResetButton from "./ResetButton";
 import PreviewCard from "./PreviewCard";
 
 function Card(props) {
+  const handleReset = () => {
+    props.getbuttonReset();
+  };
   return (
     <section className="photo">
-      <ResetButton />
+      <ResetButton getReset={handleReset} />
       <PreviewCard
         name={props.name}
         job={props.job}

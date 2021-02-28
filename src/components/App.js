@@ -24,13 +24,21 @@ function App() {
       setPhone(inputValue);
     }
   };
-
+  const handleReset = () => {
+    setName("");
+  };
   return (
     <div>
       <Header />
       <main className="main-cards">
         <div className="main-cards__sections">
-          <Card name={name} job={job} email={email} phone={phone} />
+          <Card
+            name={name}
+            job={job}
+            email={email}
+            phone={phone}
+            getbuttonReset={handleReset}
+          />
           <Form
             name={name}
             job={job}
