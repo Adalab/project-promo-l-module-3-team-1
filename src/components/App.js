@@ -1,76 +1,16 @@
-import '../stylesheets/_app.scss';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Landing from './Landing';
+import CardGenerator from './CardGenerator';
 
-import Header from './Header';
-import Form from './Form/Form';
-import Card from './Card/Card';
-import Footer from './Footer';
-
-import React, { useState } from 'react';
-
-function App() {
-  const [palettes, setPalettes] = useState(1);
-  const [name, setName] = useState('');
-  const [job, setJob] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [linkedin, setLinkedin] = useState('');
-  const [github, setGithub] = useState('');
-
-  const handleInput = (inputKey, inputValue) => {
-    if (inputKey === 'name') {
-      setName(inputValue);
-    } else if (inputKey === 'job') {
-      setJob(inputValue);
-    } else if (inputKey === 'palette') {
-      setPalettes(inputValue);
-    } else if (inputKey === 'email') {
-      setEmail(inputValue);
-    } else if (inputKey === 'phone') {
-      setPhone(inputValue);
-    } else if (inputKey === 'linkedin') {
-      setLinkedin(inputValue);
-    } else if (inputKey === 'github') {
-      setGithub(inputValue);
-    }
-  };
-  const resetInputs = () => {
-    setName('');
-    setJob('');
-    setEmail('');
-    setPhone('');
-    setLinkedin('');
-    setGithub('');
-    setPalettes(1);
-  };
-  return (
-    <>
-      <Header />
-      <main className="main-cards">
-        <div className="main-cards__sections">
-          <Card
-            getToApp={resetInputs}
-            name={name}
-            job={job}
-            email={email}
-            phone={phone}
-            palettes={palettes}
-            linkedin={linkedin}
-            github={github}
-          />
-          <Form
-            name={name}
-            job={job}
-            email={email}
-            phone={phone}
-            palettes={palettes}
-            linkedin={linkedin}
-            github={github}
-            handleInput={handleInput}
-          />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/card-generator" component={CardGenerator} />
+      </Switch>
+    );
+  }
 }
 export default App;

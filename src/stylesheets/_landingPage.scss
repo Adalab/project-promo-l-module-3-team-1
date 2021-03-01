@@ -1,3 +1,9 @@
+@import './core/variables.scss';
+@import './core/reset.scss';
+@import './pages/index.scss';
+@import './header.scss';
+@import './footer.scss';
+
 .main {
   //background-color: $color-background-landing;
   display: flex;
