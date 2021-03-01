@@ -33,7 +33,7 @@ function App() {
       setGithub(inputValue);
     }
   };
-  const handleReset = () => {
+  const resetInputs = () => {
     setName('');
     setJob('');
     setEmail('');
@@ -48,7 +48,7 @@ function App() {
       <main className="main-cards">
         <div className="main-cards__sections">
           <Card
-            getBtnReset={handleReset}
+            getToApp={resetInputs}
             name={name}
             job={job}
             email={email}

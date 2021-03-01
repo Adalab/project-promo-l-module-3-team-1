@@ -13,6 +13,7 @@ function Collapsable(props) {
     rotate === 'animate__rotateIn'
       ? setRotate('')
       : setRotate('animate__rotateIn');
+
     rotateUp === '' ? setRotateUp('animate__rotateInUpLeft') : setRotateUp('');
   };
 
