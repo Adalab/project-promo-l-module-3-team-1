@@ -1,20 +1,32 @@
 import '../stylesheets/_app.scss';
-
 import Header from './Header';
 import Form from './Form/Form';
 import Card from './Card/Card';
 import Footer from './Footer';
+import ls from '../services/LocalStorage';
 
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 function CardGenerator() {
-  const [palettes, setPalettes] = useState(1);
-  const [name, setName] = useState('');
-  const [job, setJob] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [linkedin, setLinkedin] = useState('');
-  const [github, setGithub] = useState('');
+  const localStorageData = ls.get('data') || {};
+  const [palettes, setPalettes] = useState(localStorageData.palettes || 1);
+  const [name, setName] = useState(localStorageData.name);
+  const [job, setJob] = useState(localStorageData.job);
+  const [email, setEmail] = useState(localStorageData.email);
+  const [phone, setPhone] = useState(localStorageData.phone);
+  const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
+  const [github, setGithub] = useState(localStorageData.github);
+
+  useEffect(() => {
+    ls.set('data', {
+      palettes: palettes,
+      name: name,
+      job: job,
+      email: email,
+      phone: phone,
+      linkedin: linkedin,
+      github: github,
+    });
+  });
 
   const handleInput = (inputKey, inputValue) => {
     if (inputKey === 'name') {
