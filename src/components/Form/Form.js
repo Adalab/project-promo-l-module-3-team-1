@@ -17,7 +17,9 @@ function Form(props) {
         phone={props.phone}
         linkedin={props.linkedin}
         github={props.github}
+        image={props.image}
         handleInput={props.handleInput}
+        updateAvatar={props.updateAvatar}
       />
       <Share />
     </form>
