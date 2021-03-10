@@ -36,7 +36,7 @@ function Fill(props) {
             handleInput={props.handleInput}
           />
 
-          <ImageProfile />
+          <ImageProfile updatePhoto={props.updatePhoto} />
 
           <Input
             name="phone"

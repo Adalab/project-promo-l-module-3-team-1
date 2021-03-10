@@ -4,6 +4,7 @@ import Form from './Form/Form';
 import Card from './Card/Card';
 import Footer from './Footer';
 import ls from '../services/LocalStorage';
+import previewPhoto from '../images/photo-preview2.jpg';
 
 import React, { useEffect, useState } from 'react';
 function CardGenerator() {
@@ -15,6 +16,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
+  const [photo, setPhoto] = useState(localStorageData.photo || previewPhoto);
 
   useEffect(() => {
     ls.set('data', {
@@ -25,6 +27,7 @@ function CardGenerator() {
       phone: phone,
       linkedin: linkedin,
       github: github,
+      photo: photo,
     });
   });
 
@@ -54,6 +57,10 @@ function CardGenerator() {
     setGithub('');
     setPalettes(1);
   };
+
+  const updatePhoto = () => {
+    setPhoto(photo);
+  };
   return (
     <div className="page-cards">
       <Header />
@@ -68,6 +75,7 @@ function CardGenerator() {
             palettes={palettes}
             linkedin={linkedin}
             github={github}
+            photo={photo}
           />
           <Form
             name={name}
@@ -78,6 +86,8 @@ function CardGenerator() {
             linkedin={linkedin}
             github={github}
             handleInput={handleInput}
+            photo={photo}
+            updatePhoto={updatePhoto}
           />
         </div>
       </main>

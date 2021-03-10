@@ -7,6 +7,7 @@ function Form(props) {
   const handleForm = (ev) => {
     ev.preventDefault();
   };
+
   return (
     <form className="main-cards__sections--form" onSubmit={handleForm}>
       <Design palettes={props.palettes} handleInput={props.handleInput} />
@@ -18,6 +19,8 @@ function Form(props) {
         linkedin={props.linkedin}
         github={props.github}
         handleInput={props.handleInput}
+        photo={props.photo}
+        updatePhoto={props.updatePhoto}
       />
       <Share />
     </form>

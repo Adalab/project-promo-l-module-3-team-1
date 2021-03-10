@@ -1,7 +1,8 @@
 import '../../stylesheets/card/_previewCard.scss';
 import previewPhoto from '../../images/photo-preview2.jpg';
-
+import PropTypes from 'prop-types';
 function PreviewCard(props) {
+  const photo = props.photo === '' ? previewPhoto : props.photo;
   return (
     <article className={`photocard palette-${props.palettes}`}>
       <div className="container">
@@ -14,7 +15,10 @@ function PreviewCard(props) {
           </p>
         </div>
       </div>
-      <div className="photocard__img"></div>
+      <div
+        className="photocard__img"
+        style={{ backgroundImage: `url(${photo})` }}
+      ></div>
       <ul className="photocard__list">
         <li className="photocard__list--item">
           <a
@@ -53,11 +57,8 @@ function PreviewCard(props) {
   );
 }
 
-/* DEFAULT.PROPS de nombre, job y foto hasta ver eventos */
-/* PreviewCard.defaultProps = {
-  name: 'Nombre Apellido',
-  job: 'Front-end developer',
-  photo: previewPhoto,
-}; */
+PreviewCard.propTypes = {
+  photo: PropTypes.string.isRequired,
+};
 
 export default PreviewCard;
