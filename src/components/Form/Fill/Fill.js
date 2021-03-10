@@ -1,8 +1,9 @@
-import Collapsable from '../Collapsable';
-import ImageProfile from './ImageProfile';
-import Input from './Inputs';
+import Collapsable from "../Collapsable";
+import ImageProfile from "./ImageProfile";
+import Input from "./Inputs";
 
-import '../../../stylesheets/form/fill/_fill.scss';
+import "../../../stylesheets/form/fill/_fill.scss";
+import Profile from "./Profile";
 
 function Fill(props) {
   return (
@@ -36,7 +37,8 @@ function Fill(props) {
             handleInput={props.handleInput}
           />
 
-          <ImageProfile />
+          <ImageProfile avatar={props.avatar} />
+          <Profile avatar={props.avatar} />
 
           <Input
             name="phone"

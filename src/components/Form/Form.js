@@ -1,7 +1,7 @@
-import Fill from './Fill/Fill';
-import Share from './Share/Share';
-import Design from './Design/Design';
-import '../../stylesheets/pages/_cards.scss';
+import Fill from "./Fill/Fill";
+import Share from "./Share/Share";
+import Design from "./Design/Design";
+import "../../stylesheets/pages/_cards.scss";
 
 function Form(props) {
   const handleForm = (ev) => {
@@ -18,6 +18,7 @@ function Form(props) {
         linkedin={props.linkedin}
         github={props.github}
         handleInput={props.handleInput}
+        avatar={props.avatar}
       />
       <Share />
     </form>
