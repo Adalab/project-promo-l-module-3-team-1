@@ -3,7 +3,6 @@ import ImageProfile from "./ImageProfile";
 import Input from "./Inputs";
 
 import "../../../stylesheets/form/fill/_fill.scss";
-import Profile from "./Profile";
 
 function Fill(props) {
   return (
@@ -37,8 +36,10 @@ function Fill(props) {
             handleInput={props.handleInput}
           />
 
-          <ImageProfile avatar={props.avatar} />
-          <Profile avatar={props.avatar} />
+          <ImageProfile
+            avatar={props.avatar}
+            updateAvatar={props.updateAvatar}
+          />
 
           <Input
             name="phone"

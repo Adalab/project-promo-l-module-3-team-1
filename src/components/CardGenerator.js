@@ -15,7 +15,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
-  const [avatar, setAvatar] = useState({ avatar: "" });
+  const [avatar, setAvatar] = useState("");
 
   useEffect(() => {
     ls.set("data", {
@@ -28,7 +28,9 @@ function CardGenerator() {
       github: github,
     });
   });
-
+  const updateAvatar = (avatar) => {
+    setAvatar({ avatar: avatar });
+  };
   const handleInput = (inputKey, inputValue) => {
     if (inputKey === "name") {
       setName(inputValue);
@@ -44,8 +46,6 @@ function CardGenerator() {
       setLinkedin(inputValue);
     } else if (inputKey === "github") {
       setGithub(inputValue);
-    } else if (inputKey === "avatar") {
-      setAvatar(inputValue);
     }
   };
   const resetInputs = () => {
@@ -80,8 +80,9 @@ function CardGenerator() {
             palettes={palettes}
             linkedin={linkedin}
             github={github}
-            avatar={avatar}
             handleInput={handleInput}
+            avatar={avatar}
+            updateAvatar={updateAvatar}
           />
         </div>
       </main>
