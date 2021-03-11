@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 function ShareButton(props) {
   const [hiddenClass, setHiddenClass] = useState('hidden');
 
+  const handleButton = () => {
+    setHiddenClass('');
+
+    props.handleShare();
+  };
+
   const shareLink = props.serverData.cardURL;
   console.log(shareLink);
 
@@ -51,12 +57,7 @@ function ShareButton(props) {
       );
     }
   };
-  const handleButton = () => {
-    if (hiddenClass === 'hidden') {
-      setHiddenClass('');
-    }
-    props.handleShare();
-  };
+
   return (
     <div className="section__share__container hidden__content">
       <button className="button__create" onClick={handleButton}>
