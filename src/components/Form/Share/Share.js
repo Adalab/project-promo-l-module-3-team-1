@@ -1,11 +1,14 @@
-import Collapsable from '../Collapsable';
-import ShareButton from './ShareButton';
+import Collapsable from "../Collapsable";
+import ShareButton from "./ShareButton";
 
-function Share() {
+function Share(props) {
   return (
     <section>
       <Collapsable icon="fa-share-alt" title="Comparte">
-        <ShareButton />
+        <ShareButton
+          handleShare={props.handleShare}
+          serverData={props.serverData}
+        />
       </Collapsable>
     </section>
   );
