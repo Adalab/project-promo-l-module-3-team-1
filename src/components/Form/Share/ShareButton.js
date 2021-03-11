@@ -1,4 +1,4 @@
-import '../../../stylesheets/form/share/_share-cards.scss';
+import "../../../stylesheets/form/share/_share-cards.scss";
 
 function ShareButton(props) {
   const shareLink = props.serverData.cardURL;
@@ -18,10 +18,17 @@ function ShareButton(props) {
               {shareLink}
             </a>
           </p>
-          <a className="share" target="_blank">
-            <i className="fa fa-twitter" aria-hidden="true"></i> Compartir en
-            Twitter
-          </a>
+          <button className="twitterButton">
+            <a
+              href={`https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20${shareLink}&hashtags=`}
+              target="_blank"
+              className="share"
+            >
+              {" "}
+              <i className="fa fa-twitter" aria-hidden="true"></i>Compartir en
+              twitter{" "}
+            </a>
+          </button>
         </>
       );
       /*   createBtn.disabled = true;
