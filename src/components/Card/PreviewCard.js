@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../stylesheets/card/_previewCard.scss';
 import previewPhoto from '../../images/photo-preview2.jpg';
 
@@ -14,7 +15,10 @@ function PreviewCard(props) {
           </p>
         </div>
       </div>
-      <div className="photocard__img"></div>
+      <div
+        className="photocard__img"
+        style={{ backgroundImage: `url(${props.image || previewPhoto})` }}
+      ></div>
       <ul className="photocard__list">
         <li className="photocard__list--item">
           <a

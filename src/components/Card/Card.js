@@ -15,6 +15,8 @@ function Card(props) {
           phone={props.phone}
           linkedin={props.linkedin}
           github={props.github}
+          image={props.image}
+          uploadImage={props.uploadImage}
         />
       </div>
     </section>

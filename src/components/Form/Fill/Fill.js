@@ -1,7 +1,6 @@
 import Collapsable from '../Collapsable';
 import ImageProfile from './ImageProfile';
 import Input from './Inputs';
-
 import '../../../stylesheets/form/fill/_fill.scss';
 
 function Fill(props) {
@@ -36,7 +35,7 @@ function Fill(props) {
             handleInput={props.handleInput}
           />
 
-          <ImageProfile />
+          <ImageProfile image={props.image} updateAvatar={props.updateAvatar} />
 
           <Input
             name="phone"
