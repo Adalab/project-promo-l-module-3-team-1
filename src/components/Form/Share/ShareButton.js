@@ -1,6 +1,8 @@
-import "../../../stylesheets/form/share/_share-cards.scss";
-
+import '../../../stylesheets/form/share/_share-cards.scss';
+import React, { useState } from 'react';
 function ShareButton(props) {
+  const [hiddenClass, setHiddenClass] = useState('hidden');
+
   const shareLink = props.serverData.cardURL;
   console.log(shareLink);
 
@@ -14,6 +16,7 @@ function ShareButton(props) {
               href={shareLink}
               className="text_link_card section__twitter__button"
               target="_blank"
+              rel="noreferrer"
             >
               {shareLink}
             </a>
@@ -23,10 +26,10 @@ function ShareButton(props) {
               href={`https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20${shareLink}&hashtags=`}
               target="_blank"
               className="share"
+              rel="noreferrer"
             >
-              {" "}
               <i className="fa fa-twitter" aria-hidden="true"></i>Compartir en
-              twitter{" "}
+              twitter
             </a>
           </button>
         </>
@@ -49,6 +52,9 @@ function ShareButton(props) {
     }
   };
   const handleButton = () => {
+    if (hiddenClass === 'hidden') {
+      setHiddenClass('');
+    }
     props.handleShare();
   };
   return (
@@ -59,7 +65,9 @@ function ShareButton(props) {
       </button>
 
       {/* PENDIENTE añadir o quitar clase hidden */}
-      <div className="section__share__create ">{renderCreatedCard()}</div>
+      <div className={`section__share__create ${hiddenClass}`}>
+        {renderCreatedCard()}
+      </div>
     </div>
   );
 }
