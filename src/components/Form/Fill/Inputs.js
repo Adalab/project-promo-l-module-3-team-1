@@ -16,7 +16,6 @@ function Input(props) {
         placeholder={props.placeholder}
         value={props.value}
         required
-        /*   {props.children} */
       />
     </>
   );
