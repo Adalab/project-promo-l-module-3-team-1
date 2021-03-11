@@ -2,7 +2,7 @@ import React from 'react';
 import previewPhoto from '../../../images/photo-preview2.jpg';
 
 function ImageProfile(props) {
-  /*   const handleInputImage = (event) => {
+  /*  const handleInputImage = (event) => {
     props.handleInput(event.target.name, event.target.value);
     console.log(event.target.name, event.target.value);
   }; */
@@ -11,8 +11,8 @@ function ImageProfile(props) {
   let myFileField = React.createRef();
 
   const uploadImage = (ev) => {
-    /*   console.log('La usuaria ha abierto la ventana para elegir ficheros');
-    console.log('La usuaria ha elegido los ficheros', ev.currentTarget.files); */
+    console.log('La usuaria ha abierto la ventana para elegir ficheros');
+    console.log('La usuaria ha elegido los ficheros', ev.currentTarget.files);
     console.log(
       'El primero de los ficheros elegidos es',
       ev.currentTarget.files[0]
@@ -26,13 +26,13 @@ function ImageProfile(props) {
   };
 
   const getImage = () => {
-    /* console.log('Información útil sobre el fichero cargado', fr); */
+    console.log('Información útil sobre el fichero cargado', fr);
     const image = fr.result;
-    /* console.log(fr); */
+    console.log(fr);
     props.updateAvatar(image);
   };
 
-  const imageSelected = props.image === '' ? previewPhoto : props.image;
+  const imageSelected = !props.image ? previewPhoto : props.image;
   console.log(imageSelected);
 
   return (
@@ -53,7 +53,7 @@ function ImageProfile(props) {
         />
         <span
           className="fill__form--box "
-          style={{ backgroundImage: `url(${previewPhoto})` }}
+          style={{ backgroundImage: `url(${imageSelected})` }}
         ></span>
       </div>
     </div>

@@ -16,7 +16,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
-  const [image, setImage] = useState(localStorageData.image || previewPhoto);
+  const [image, setImage] = useState(localStorageData.image || '');
 
   useEffect(() => {
     ls.set('data', {
@@ -61,7 +61,7 @@ function CardGenerator() {
   };
 
   const updateAvatar = (image) => {
-    setImage({ image: image });
+    setImage(image);
   };
 
   return (

@@ -17,7 +17,7 @@ function PreviewCard(props) {
       </div>
       <div
         className="photocard__img"
-        style={{ backgroundImage: `url(${previewPhoto})` }}
+        style={{ backgroundImage: `url(${props.image || previewPhoto})` }}
       ></div>
       <ul className="photocard__list">
         <li className="photocard__list--item">
