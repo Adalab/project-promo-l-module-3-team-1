@@ -1,14 +1,14 @@
-import '../stylesheets/_app.scss';
-import Header from './Header';
-import Form from './Form/Form';
-import Card from './Card/Card';
-import Footer from './Footer';
-import ls from '../services/LocalStorage';
-import sendToApi from '../services/api';
+import "../stylesheets/_app.scss";
+import Header from "./Header";
+import Form from "./Form/Form";
+import Card from "./Card/Card";
+import Footer from "./Footer";
+import ls from "../services/LocalStorage";
+import sendToApi from "../services/api";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 function CardGenerator() {
-  const localStorageData = ls.get('data') || {};
+  const localStorageData = ls.get("data") || {};
   const [palettes, setPalettes] = useState(localStorageData.palettes || 1);
   const [name, setName] = useState(localStorageData.name);
   const [job, setJob] = useState(localStorageData.job);
@@ -16,11 +16,12 @@ function CardGenerator() {
   const [phone, setPhone] = useState(localStorageData.phone);
   const [linkedin, setLinkedin] = useState(localStorageData.linkedin);
   const [github, setGithub] = useState(localStorageData.github);
-  const [image, setImage] = useState(localStorageData.image || '');
+  const [image, setImage] = useState(localStorageData.image || "");
   const [serverData, setServerData] = useState({});
+  const [hiddenClass, setHiddenClass] = useState("hidden");
 
   useEffect(() => {
-    ls.set('data', {
+    ls.set("data", {
       palettes: palettes,
       name: name,
       job: job,
@@ -33,32 +34,33 @@ function CardGenerator() {
   });
 
   const handleInput = (inputKey, inputValue) => {
-    if (inputKey === 'name') {
+    if (inputKey === "name") {
       setName(inputValue);
-    } else if (inputKey === 'job') {
+    } else if (inputKey === "job") {
       setJob(inputValue);
-    } else if (inputKey === 'palette') {
+    } else if (inputKey === "palette") {
       setPalettes(inputValue);
-    } else if (inputKey === 'email') {
+    } else if (inputKey === "email") {
       setEmail(inputValue);
-    } else if (inputKey === 'phone') {
+    } else if (inputKey === "phone") {
       setPhone(inputValue);
-    } else if (inputKey === 'linkedin') {
+    } else if (inputKey === "linkedin") {
       setLinkedin(inputValue);
-    } else if (inputKey === 'github') {
+    } else if (inputKey === "github") {
       setGithub(inputValue);
     }
   };
 
   const resetInputs = () => {
-    setName('');
-    setJob('');
-    setEmail('');
-    setPhone('');
-    setLinkedin('');
-    setGithub('');
+    setName("");
+    setJob("");
+    setEmail("");
+    setPhone("");
+    setLinkedin("");
+    setGithub("");
     setPalettes(1);
-    setImage('');
+    setImage("");
+    setHiddenClass("hidden");
   };
 
   const updateAvatar = (image) => {
@@ -66,7 +68,7 @@ function CardGenerator() {
   };
 
   const handleShare = () => {
-    console.log('me has clicado');
+    setHiddenClass("");
     const userData = {
       palette: parseInt(palettes),
       name: name,
@@ -77,7 +79,6 @@ function CardGenerator() {
       github: github,
       photo: image,
     };
-    console.log(userData);
     sendToApi(userData).then((serverData) => {
       setServerData(serverData);
     });
@@ -112,6 +113,7 @@ function CardGenerator() {
             updateAvatar={updateAvatar}
             handleShare={handleShare}
             serverData={serverData}
+            hiddenClass={hiddenClass}
           />
         </div>
       </main>

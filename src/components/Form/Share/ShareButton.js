@@ -1,11 +1,7 @@
-import '../../../stylesheets/form/share/_share-cards.scss';
-import React, { useState } from 'react';
+import "../../../stylesheets/form/share/_share-cards.scss";
+import React, { useState } from "react";
 function ShareButton(props) {
-  const [hiddenClass, setHiddenClass] = useState('hidden');
-
   const handleButton = () => {
-    setHiddenClass('');
-
     props.handleShare();
   };
 
@@ -40,12 +36,6 @@ function ShareButton(props) {
           </button>
         </>
       );
-      /*   createBtn.disabled = true;
-      const twitterLink = document.querySelector('.js-btn-twitter');
-      twitterLink.setAttribute(
-        'href',
-        `https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${shareLink}`
-      ); */
     } else {
       return (
         <>
@@ -65,8 +55,7 @@ function ShareButton(props) {
         Crear tarjeta
       </button>
 
-      {/* PENDIENTE añadir o quitar clase hidden */}
-      <div className={`section__share__create ${hiddenClass}`}>
+      <div className={`section__share__create ${props.hiddenClass}`}>
         {renderCreatedCard()}
       </div>
     </div>

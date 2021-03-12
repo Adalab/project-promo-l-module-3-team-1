@@ -21,7 +21,11 @@ function Form(props) {
         handleInput={props.handleInput}
         updateAvatar={props.updateAvatar}
       />
-      <Share handleShare={props.handleShare} serverData={props.serverData} />
+      <Share
+        handleShare={props.handleShare}
+        serverData={props.serverData}
+        hiddenClass={props.hiddenClass}
+      />
     </form>
   );
 }

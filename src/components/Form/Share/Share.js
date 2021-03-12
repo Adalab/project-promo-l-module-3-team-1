@@ -8,6 +8,7 @@ function Share(props) {
         <ShareButton
           handleShare={props.handleShare}
           serverData={props.serverData}
+          hiddenClass={props.hiddenClass}
         />
       </Collapsable>
     </section>
