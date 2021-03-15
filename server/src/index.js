@@ -1,7 +1,6 @@
 const cors = require("cors");
 const express = require("express");
-
-const usersData = require("./data/data.json");
+// const usersData = require("./data/data.json");
 
 // SERVER
 
@@ -20,9 +19,23 @@ app.listen(serverPort, () => {
 const cards = [];
 
 app.post("/card", (req, res) => {
-  // guardar los datos en cards
-  // comprobar que todos los datos me los están enviando
-  const newCards = cards.push(usersData);
-  console.log("hola", cards);
-  res.json(usersData);
+  if (req.body.name === "") {
+    res.json({
+      success: false,
+      error: `Mandatory fields: name`,
+    });
+  } else {
+    const userData = req.body;
+    const cardId = `id-${cards.length}`;
+    userData.id = cardId;
+    // guardar los datos en cards
+    // comprobar que todos los datos me los están enviando
+
+    cards.push(userData);
+    console.log(cards);
+    res.json({
+      success: true,
+      cardURL: `http://localhost:3000/card/${cardId}`,
+    });
+  }
 });
