@@ -4,7 +4,7 @@ import Form from "./Form/Form";
 import Card from "./Card/Card";
 import Footer from "./Footer";
 import ls from "../services/LocalStorage";
-import sendToApi from "../services/api";
+import api from "../services/api";
 
 import React, { useEffect, useState } from "react";
 function CardGenerator() {
@@ -79,7 +79,7 @@ function CardGenerator() {
       github: github,
       photo: image,
     };
-    sendToApi(userData).then((serverData) => {
+    api.sendToApi(userData).then((serverData) => {
       setServerData(serverData);
     });
   };

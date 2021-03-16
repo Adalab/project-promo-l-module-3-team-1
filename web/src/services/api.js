@@ -9,7 +9,16 @@ const sendToApi = (data) => {
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch(() => {
+      return {
+        success: false,
+        error: "Se ha producido un error. Inténtelo más tarde",
+      };
     });
 };
 
-export default sendToApi;
+const exportObject = {
+  sendToApi: sendToApi,
+};
+export default exportObject;
