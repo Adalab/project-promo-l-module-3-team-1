@@ -82,7 +82,7 @@ app.post("/card", (req, res) => {
     console.log(cards);
     res.json({
       success: true,
-      cardURL: `http://localhost:3000/card/${cardId}`,
+      cardURL: `https://awesome-profile-cards-magician.herokuapp.com/#/card/${cardId}`,
     });
   }
 });
