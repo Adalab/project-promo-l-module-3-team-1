@@ -1,7 +1,6 @@
-const cors = require("cors");
-const express = require("express");
-// const usersData = require("./data/data.json");
-
+const cors = require('cors');
+const express = require('express');
+const path = require('path');
 // SERVER
 
 // config server
@@ -11,18 +10,53 @@ app.use(express.json());
 app.use(cors());
 
 // init express aplication
-const serverPort = 3000;
+const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
+const appStaticPath = './public';
+app.use(express.static(appStaticPath));
+
 const cards = [];
 
-app.post("/card", (req, res) => {
-  if (req.body.name === "") {
+app.post('/card', (req, res) => {
+  req.body.palette = req.body.palette || 1;
+
+  if (req.body.name === '') {
     res.json({
       success: false,
       error: `Mandatory fields: name`,
+    });
+  } else if (req.body.job === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields: job`,
+    });
+  } else if (req.body.email === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields: email`,
+    });
+  } else if (req.body.phone === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields: phone`,
+    });
+  } else if (req.body.linkedin === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields: linkedin`,
+    });
+  } else if (req.body.github === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields: github`,
+    });
+  } else if (req.body.photo === '') {
+    res.json({
+      success: false,
+      error: `Mandatory fields:photo`,
     });
   } else {
     const userData = req.body;

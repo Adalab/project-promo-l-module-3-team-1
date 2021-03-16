@@ -1,5 +1,5 @@
-import "../../../stylesheets/form/share/_share-cards.scss";
-import React, { useState } from "react";
+import '../../../stylesheets/form/share/_share-cards.scss';
+import React from 'react';
 function ShareButton(props) {
   const handleButton = () => {
     props.handleShare();
