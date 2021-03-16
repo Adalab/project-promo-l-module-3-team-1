@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+        integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <title>Awesome Profile Cards</title>
+    <link href="//fonts.googleapis.com/css2?family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="../../public/static/css/main.9ec65eb7.chunk.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <article class="photocard palette-<%=palette %>">
+        <div class="container">
+            <div class="tittlescontainer">
+                <h2 class=" photocard__title  palette-<%=palette %>">
+                    <%= name %>
+                </h2>
+                <p class=" photocard__title2  palette-<%=palette %>">
+                    <%= job %>
+                </p>
+            </div>
+        </div>
+        <div class="photocard__img  palette-<%=palette %>">
+            <%= photo %>
+        </div>
+        <ul class="photocard__list  palette-<%=palette %> ">
+            <li class="photocard__list--item">
+                <a href="tel:" class="  palette-<%=palette %> photocard__list--link icon fa fa-mobile"></a>
+            </li>
+
+            <li class="photocard__list--item  palette-<%=palette %>">
+                <a href="mailto:" class=" palette-<%=palette %> photocard__list--link icon fa fa-envelope"></a>
+            </li>
+
+            <li class="photocard__list--item  palette-<%=palette %>">
+                <a href="https://www.linkedin.com/in/" target="_blank"
+                    class=" palette-<%=palette %> photocard__list--link icon fa fa-linkedin"></a>
+            </li>
+            <li class="photocard__list--item  palette-<%=palette %>">
+                <a href="https://www.github.com/" target="_blank"
+                    class=" palette-<%=palette %> photocard__list--link  icon fa fa-github-alt  "></a>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
