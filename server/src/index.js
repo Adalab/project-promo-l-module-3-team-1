@@ -2,6 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const path = require("path");
 const Database = require("better-sqlite3");
+const { response } = require("express");
 // SERVER
 
 // config server
@@ -24,10 +25,14 @@ const appStaticPath = "./public";
 app.use(express.static(appStaticPath));
 
 app.get("/card/:id", (req, res) => {
-  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
-  const data = query.get(req.params.id);
-  console.log(data);
-
+  // const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  // const data = query.get(req.params.id);
+  // console.log(data);
+  const data = {
+    palette: 1,
+    name: "Ana F",
+    job: "developer",
+  };
   res.render("pages/card", data);
 });
 
