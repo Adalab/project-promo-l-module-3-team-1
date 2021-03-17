@@ -10,7 +10,8 @@
     <link href="//fonts.googleapis.com/css2?family=Merriweather:wght@900&amp;display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link href="../../public/static/css/main.9ec65eb7.chunk.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="../styles-for-template-engine.css">
 </head>
 
 <body>
@@ -25,24 +26,25 @@
                 </p>
             </div>
         </div>
-        <div class="photocard__img  palette-<%=palette %>">
-            <%= photo %>
+        <div class="photocard__img" style="background-image: url('<%= photo %>');">
+
         </div>
         <ul class="photocard__list  palette-<%=palette %> ">
             <li class="photocard__list--item">
-                <a href="tel:" class="  palette-<%=palette %> photocard__list--link icon fa fa-mobile"></a>
+                <a href="tel:<%= phone %>" class="  palette-<%=palette %> photocard__list--link icon fa fa-mobile"></a>
             </li>
 
             <li class="photocard__list--item  palette-<%=palette %>">
-                <a href="mailto:" class=" palette-<%=palette %> photocard__list--link icon fa fa-envelope"></a>
+                <a href="mailto:<%= email %>"
+                    class=" palette-<%=palette %> photocard__list--link icon fa fa-envelope"></a>
             </li>
 
             <li class="photocard__list--item  palette-<%=palette %>">
-                <a href="https://www.linkedin.com/in/" target="_blank"
+                <a href="https://www.linkedin.com/in/<%= linkedin %>" target="_blank"
                     class=" palette-<%=palette %> photocard__list--link icon fa fa-linkedin"></a>
             </li>
             <li class="photocard__list--item  palette-<%=palette %>">
-                <a href="https://www.github.com/" target="_blank"
+                <a href="https://www.github.com/<%= github %>" target="_blank"
                     class=" palette-<%=palette %> photocard__list--link  icon fa fa-github-alt  "></a>
             </li>
         </ul>
