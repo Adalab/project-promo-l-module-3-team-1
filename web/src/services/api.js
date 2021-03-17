@@ -1,4 +1,4 @@
-const isDevEnviroment = process.env.NODE_EV === "development"; //Booleano
+const isDevEnviroment = process.env.NODE_ENV === "development"; //Booleano
 const apiUrl = isDevEnviroment
   ? "http://localhost:3000"
   : "https://awesome-profile-cards-magician.herokuapp.com";

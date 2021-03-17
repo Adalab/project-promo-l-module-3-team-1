@@ -23,17 +23,20 @@ const db = new Database("./src/data/cards.db", {
 
 const appStaticPath = "./public";
 app.use(express.static(appStaticPath));
+const appStaticPathForTemplateEngine = "./public-for-template-engine";
+app.use(express.static(appStaticPathForTemplateEngine));
 
 app.get("/card/:id", (req, res) => {
-  // const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
-  // const data = query.get(req.params.id);
-  // console.log(data);
-  const data = {
-    palette: 1,
-    name: "Ana F",
-    job: "developer",
-  };
-  res.render("pages/card", data);
+  //DB SQL SELECT
+  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  const data = query.get(req.params.id);
+  console.log(data);
+
+  if (data) {
+    res.render("pages/card", data);
+  } else {
+    res.render("pages/card-not-found");
+  }
 });
 
 const cards = [];
@@ -83,16 +86,36 @@ app.post("/card", (req, res) => {
     // guardar los datos en cards
     // comprobar que todos los datos me los están enviando
 
-    cards.push(userData);
-    console.log(cards);
+    //cards.push(userData);
+    //console.log(cards);
+
+    //DB SQL INSERT
+    const stmt = db.prepare(
+      "INSERT INTO cards(name,job,photo,phone,email,linkedin,github,palette)VALUES(?,?,?,?,?,?,?,?)"
+    );
+    const result = stmt.run(
+      req.body.name,
+      req.body.job,
+      req.body.photo,
+      req.body.phone,
+      req.body.email,
+      req.body.linkedin,
+      req.body.github,
+      req.body.palette
+    );
+
+    const serverUrl =
+      req.hostname === "localhost"
+        ? "http://localhost:3000"
+        : "https://awesome-profile-cards-magician.herokuapp.com";
+
     res.json({
       success: true,
-      cardURL: `https://awesome-profile-cards-magician.herokuapp.com/#/card/${cardId}`,
+      cardURL: `${serverUrl}/card/${result.lastInsertRowid}`,
     });
   }
 });
 app.get("*", (req, res) => {
-  // relative to this directory
   const notFoundFileRelativePath = "../public/404-not-found.html";
   const notFoundFileAbsolutePath = path.join(
     __dirname,

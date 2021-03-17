@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "project",
     "scripts": {
-      "start": "cd server && npm install && npm start"
+      "start": "cd web && npm install && npm run docs && cd .. && cd server && npm install && npm start",
+      "dev": "cd web && npm start & cd server && npm run dev"
     },
     "author": "team1",
     "license": "ISC"
