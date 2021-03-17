@@ -1,7 +1,8 @@
-import Collapsable from '../Collapsable';
-import ImageProfile from './ImageProfile';
-import Input from './Inputs';
-import '../../../stylesheets/form/fill/_fill.scss';
+import Collapsable from "../Collapsable";
+import ImageProfile from "./ImageProfile";
+import Input from "./Inputs";
+import "../../../stylesheets/form/fill/_fill.scss";
+import PropTypes from "prop-types";
 
 function Fill(props) {
   return (
@@ -71,4 +72,9 @@ function Fill(props) {
     </section>
   );
 }
+Fill.propTypes = {
+  value: PropTypes.string,
+  handleInput: PropTypes.func,
+};
+
 export default Fill;

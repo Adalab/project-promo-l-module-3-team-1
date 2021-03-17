@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import '../../stylesheets/form/_collapsable.scss';
-
+import React, { useState } from "react";
+import "../../stylesheets/form/_collapsable.scss";
+import PropTypes from "prop-types";
 function Collapsable(props) {
   const [isOpen, setIsOpen] = useState(
     !!props.open
   ); /* double negation transforms from undefined(falsy) to false */
-  const [rotate, setRotate] = useState('animate__rotateIn');
-  const [rotateUp, setRotateUp] = useState('');
+  const [rotate, setRotate] = useState("animate__rotateIn");
+  const [rotateUp, setRotateUp] = useState("");
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-    rotate === 'animate__rotateIn'
-      ? setRotate('')
-      : setRotate('animate__rotateIn');
+    rotate === "animate__rotateIn"
+      ? setRotate("")
+      : setRotate("animate__rotateIn");
 
-    rotateUp === '' ? setRotateUp('animate__rotateInUpLeft') : setRotateUp('');
+    rotateUp === "" ? setRotateUp("animate__rotateInUpLeft") : setRotateUp("");
   };
 
   return (
@@ -33,7 +33,7 @@ function Collapsable(props) {
       {/* content */}
       <div
         className={`hidden__content ${
-          isOpen === true ? '' : 'collapsable--close'
+          isOpen === true ? "" : "collapsable--close"
         }`}
         /*    ${isOpen === false ? "" : "collapsable--close"}`} */
       >
@@ -42,5 +42,5 @@ function Collapsable(props) {
     </>
   );
 }
-
+Collapsable.propTypes = {};
 export default Collapsable;

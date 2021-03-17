@@ -1,5 +1,6 @@
 import Collapsable from "../Collapsable";
 import ShareButton from "./ShareButton";
+import PropTypes from "prop-types";
 
 function Share(props) {
   return (
@@ -14,4 +15,7 @@ function Share(props) {
     </section>
   );
 }
+Share.propTypes = {
+  handleShare: PropTypes.func,
+};
 export default Share;

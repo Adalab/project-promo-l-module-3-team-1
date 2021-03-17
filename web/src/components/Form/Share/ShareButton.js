@@ -1,5 +1,7 @@
-import '../../../stylesheets/form/share/_share-cards.scss';
-import React from 'react';
+import "../../../stylesheets/form/share/_share-cards.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
 function ShareButton(props) {
   const handleButton = () => {
     props.handleShare();
@@ -61,4 +63,7 @@ function ShareButton(props) {
     </div>
   );
 }
+ShareButton.propTypes = {
+  className: PropTypes.string,
+};
 export default ShareButton;

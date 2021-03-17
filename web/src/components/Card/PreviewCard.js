@@ -1,6 +1,6 @@
-import React from 'react';
-import '../../stylesheets/card/_previewCard.scss';
-import previewPhoto from '../../images/photo-preview2.jpg';
+import React from "react";
+import "../../stylesheets/card/_previewCard.scss";
+import previewPhoto from "../../images/photo-preview2.jpg";
 
 function PreviewCard(props) {
   return (
@@ -8,10 +8,10 @@ function PreviewCard(props) {
       <div className="container">
         <div className="tittlescontainer">
           <h2 className=" photocard__title">
-            {props.name || 'Nombre y Apellido'}
+            {props.name || "Nombre y Apellido"}
           </h2>
           <p className=" photocard__title2">
-            {props.job || 'Front-end developer'}
+            {props.job || "Front-end developer"}
           </p>
         </div>
       </div>
@@ -22,14 +22,14 @@ function PreviewCard(props) {
       <ul className="photocard__list">
         <li className="photocard__list--item">
           <a
-            href={props.phone ? `tel:${props.phone}` : '#'}
+            href={props.phone ? `tel:${props.phone}` : "#"}
             className=" photocard__list--link icon fa fa-mobile"
           ></a>
         </li>
 
         <li className="photocard__list--item">
           <a
-            href={props.email ? `mailto:${props.email}` : '#'}
+            href={props.email ? `mailto:${props.email}` : "#"}
             className=" photocard__list--link icon fa fa-envelope"
           ></a>
         </li>
@@ -39,7 +39,7 @@ function PreviewCard(props) {
             href={
               props.linkedin
                 ? `https://www.linkedin.com/in/${props.linkedin}`
-                : '#'
+                : "#"
             }
             target="_blank"
             className=" photocard__list--link icon fa fa-linkedin"
@@ -47,7 +47,7 @@ function PreviewCard(props) {
         </li>
         <li className="photocard__list--item">
           <a
-            href={props.github ? `https://www.github.com/${props.github}` : '#'}
+            href={props.github ? `https://www.github.com/${props.github}` : "#"}
             target="_blank"
             className=" photocard__list--link  icon fa fa-github-alt  "
           ></a>
@@ -57,11 +57,10 @@ function PreviewCard(props) {
   );
 }
 
-/* DEFAULT.PROPS de nombre, job y foto hasta ver eventos */
-/* PreviewCard.defaultProps = {
-  name: 'Nombre Apellido',
-  job: 'Front-end developer',
+PreviewCard.defaultProps = {
+  name: "Nombre Apellido",
+  job: "Front-end developer",
   photo: previewPhoto,
-}; */
+};
 
 export default PreviewCard;

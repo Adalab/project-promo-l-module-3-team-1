@@ -1,4 +1,5 @@
-import '../../../stylesheets/form/design/_palette.scss';
+import "../../../stylesheets/form/design/_palette.scss";
+import PropTypes from "prop-types";
 
 function Palette(props) {
   const handlePalettes = (event) => {
@@ -24,4 +25,7 @@ function Palette(props) {
     </div>
   );
 }
+Palette.propTypes = {
+  palettes: PropTypes.number,
+};
 export default Palette;

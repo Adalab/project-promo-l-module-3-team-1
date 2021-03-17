@@ -1,6 +1,6 @@
-import '../../../stylesheets/form/design/_palettes.scss';
-import Palette from './Palette';
-
+import "../../../stylesheets/form/design/_palettes.scss";
+import Palette from "./Palette";
+import PropTypes from "prop-types";
 function Palettes(props) {
   return (
     <div className="design hidden__content">
@@ -30,4 +30,7 @@ function Palettes(props) {
     </div>
   );
 }
+Palettes.propTypes = {
+  palettes: PropTypes.number,
+};
 export default Palettes;

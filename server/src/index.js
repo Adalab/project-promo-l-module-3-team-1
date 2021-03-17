@@ -7,7 +7,7 @@ const { response } = require("express");
 
 // config server
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: "10Mb" }));
 
 app.use(cors());
 app.set("view engine", "ejs");
@@ -30,7 +30,8 @@ app.get("/card/:id", (req, res) => {
   //DB SQL SELECT
   const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
   const data = query.get(req.params.id);
-  console.log(data);
+  data.palette = parseInt(data.palette);
+  //console.log(data);
 
   if (data) {
     res.render("pages/card", data);
@@ -115,11 +116,11 @@ app.post("/card", (req, res) => {
     });
   }
 });
-app.get("*", (req, res) => {
-  const notFoundFileRelativePath = "../public/404-not-found.html";
-  const notFoundFileAbsolutePath = path.join(
-    __dirname,
-    notFoundFileRelativePath
-  );
-  res.status(404).sendFile(notFoundFileAbsolutePath);
-});
+// app.get("*", (req, res) => {
+//   const notFoundFileRelativePath = "../public/404-not-found.html";
+//   const notFoundFileAbsolutePath = path.join(
+//     __dirname,
+//     notFoundFileRelativePath
+//   );
+//   res.status(404).sendFile(notFoundFileAbsolutePath);
+// });

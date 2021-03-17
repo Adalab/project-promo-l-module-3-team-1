@@ -1,13 +1,15 @@
 {
-    "name": "team-1-api",
-    "version": "1.0.0",
-    "description": "project",
-    "scripts": {
-      "start": "cd server && npm start",
-      "build": "cd server && npm install",
-      "dev": "cd web && npm start && cd ../server && npm run dev"
-    },
-    "author": "team1",
-    "license": "ISC"
+  "name": "team-1-api",
+  "version": "1.0.0",
+  "description": "project",
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "cd server && npm install",
+    "dev": "cd web && npm start & cd server && npm run dev"
+  },
+  "author": "team1",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
-  
+}

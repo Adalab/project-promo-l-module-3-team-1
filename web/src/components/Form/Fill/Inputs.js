@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Input(props) {
   const handleInputEvent = (event) => {
     props.handleInput(event.target.name, event.target.value);
@@ -21,4 +23,12 @@ function Input(props) {
   );
 }
 Input.defaultProps = { type: "text" };
+Input.propTypes = {
+  name: PropTypes.string,
+  id: PropTypes.string,
+  value: PropTypes.string,
+  type: PropTypes.string,
+  className: PropTypes.string,
+};
+
 export default Input;

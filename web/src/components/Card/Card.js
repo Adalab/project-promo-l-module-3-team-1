@@ -1,6 +1,7 @@
-import '../../stylesheets/card/_card.scss';
-import ResetButton from './ResetButton';
-import PreviewCard from './PreviewCard';
+import "../../stylesheets/card/_card.scss";
+import ResetButton from "./ResetButton";
+import PreviewCard from "./PreviewCard";
+import PropTypes from "prop-types";
 
 function Card(props) {
   return (
@@ -22,4 +23,15 @@ function Card(props) {
     </section>
   );
 }
+Card.propTypes = {
+  name: PropTypes.string,
+  job: PropTypes.string,
+  palettes: PropTypes.number,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  linkedin: PropTypes.string,
+  github: PropTypes.string,
+  image: PropTypes.string,
+};
+
 export default Card;
